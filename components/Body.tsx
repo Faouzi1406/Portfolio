@@ -22,9 +22,9 @@ const Body = () => {
 	<div className="text-white">
 	<Titles title="Projects"/>
 	<p className="font-bold text-white mb-2">Mijn projecten</p>
-	<p className="w-96 text-white">
+	<div className="w-96 text-white">
 		<Project />
-	</p>
+	</div>
 	</div>
 	</div>
 	)

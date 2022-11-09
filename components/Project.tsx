@@ -8,7 +8,7 @@ import Link from "next/link";
 // }
 
 const Project = () => { 
-	return <div>
+	return (<div>
 		<div className="rounded-md border p-1 flex gap-2">
 
 			<Image  src="/Mij.png" width={80} height={80} alt="icon"/>
@@ -18,11 +18,10 @@ const Project = () => {
 				<p>Description</p>
 			</div>
 			<div className="font-bold flex flex-col justify-center mr-0">
-			<p>></p>
 			</div>
 		</div>
-		<Link href={"more"} className=>More Projects</Link>
-	</div>
+		<Link href={"more"}>More Projects</Link>
+	</div>)
 }
 export default Project;
 

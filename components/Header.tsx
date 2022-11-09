@@ -1,13 +1,16 @@
+import Link from "next/link";
+
 const Header = () => {
 	return (
 	<div>
 	<div>
-			<div className="flex  flex-wrap justify-between font-mono p-2 bg-black text-white shadow-lg">
+	<div className="flex  flex-wrap justify-between font-mono p-2 bg-black text-white shadow-lg">
 	
-	<p>
+			<Link href={"/"}>
 			FAOUZI	
-			</p>
-		</div>
+			</Link>
+	</div>
+
 	</div>
 		<header>
 			<div className="flex  flex-wrap items-center justify-center font-mono p-2 text-white cursor-pointer select-none">
