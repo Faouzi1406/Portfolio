@@ -20,7 +20,7 @@ const Project = () => {
 			<div className="font-bold flex flex-col justify-center mr-0">
 			</div>
 		</div>
-		<Link href={"more"}>More Projects</Link>
+		<Link href={"more"} className="cursor-pointer">More Projects</Link>
 	</div>)
 }
 export default Project;

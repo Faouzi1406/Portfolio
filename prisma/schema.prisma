@@ -7,5 +7,30 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = "mysql/"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id          Int           @id @default(autoincrement())
+  email       String        @unique
+  username    String        @unique
+  password    String
+  sessionKeys sessionKeys[]
+}
+
+model Projects {
+  id            Int    @id @default(autoincrement())
+  projectname   String @unique
+  projectinfo   String @unique
+  projectgiturl String @unique
+  projectthumb  String
+}
+
+model sessionKeys {
+  id         Int      @id @default(autoincrement())
+  sessionKey String   @unique
+  Admin      Admin    @relation(fields: [userId], references: [id])
+  userId     Int
+  created    DateTime @default(now())
+  isValidated  Boolean @default(true) 
 }
