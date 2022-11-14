@@ -15,6 +15,7 @@ class Admin {
 		this.sessionkey = sessionkey;
 	}
 
+	//@ts-ignore
 	async login(user:Authlogin):boolean{
 		
 		const prisma = new PrismaClient();
@@ -31,6 +32,7 @@ class Admin {
 			});
 
 			console.log(checkUser)
+			//@ts-ignore
 			if(checkUser.password == user.password) {
 				//logged in 
 				console.log("i be true")
@@ -48,6 +50,7 @@ class Admin {
 		});
 	}	
 
+	//@ts-ignore
 	async auth():boolean{
 		//prisma client 
 		const prisma = new PrismaClient();
@@ -68,6 +71,7 @@ class Admin {
 				return false;
 			});
 			//isValidated return json key
+			//@ts-ignore
 			return get_session_key.isValidated || false; 
 		}
 		
